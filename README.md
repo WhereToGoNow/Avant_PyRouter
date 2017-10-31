@@ -1,10 +1,14 @@
-# RyuAlgorithm\_Python
+# PyRouter
 
 Implementation of Ryu's routing algorithm in python.
 
 ### Requirements
 - Python 2.X or 3.X
 - Tested on python 2.7, python 3.6, pypy 5.7.1
+
+### TODO
+- Connect the router with the evaluator.
+- Test with some real-world data.
 
 ### How to test
 Run `test.py`.
