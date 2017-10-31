@@ -18,6 +18,8 @@ weight_time_edges = -0.03
 class Graph(object):
     def __init__(self, num_nodes):
         """Constructor."""
+        # Nodes: V = {0, 1, ..., (num_nodes - 1)}
+        # Edges: E = {i, j in V | (i -> j)}
         self.num_nodes = num_nodes
         self.time_nodes = [0] * self.num_nodes
         self.eval_nodes = [0] * self.num_nodes
