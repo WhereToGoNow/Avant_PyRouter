@@ -6,12 +6,40 @@ Implementation of Ryu's routing algorithm in python.
 - Python 2.X or 3.X
 - Tested on python 2.7, python 3.6, pypy 5.7.1
 
-### TODO
-- Connect the router with the evaluator.
-- Test with some real-world data.
+### How to use
+```python
+from router import Graph, Router
+
+def do_work():
+    # configurations
+    num_nodes = ...
+    v_start, v_end = ..., ...
+    time_max, length_max = ..., ...
+    
+    # initialize the graph
+    for v in range(num_nodes):
+        graph.time_nodes[v] = ...
+        graph.eval_nodes[v] = ...
+        
+        for v_next in range(num_nodes):
+            graph.time_edges[v][v_next] = ...
+    
+    # generate the path
+    graph = Graph(num_nodes)
+    router = Router(graph, verbose=False)
+    
+    path = router.find_best_path(v_start, v_end, length_max, time_max)
+    
+    # play with the generated path
+    # ...
+```
 
 ### How to test
 Run `test.py`.
+
+### TODO
+- Connect the router with the evaluator.
+- Test with some real-world data.
 
 ### Example output
 ```
